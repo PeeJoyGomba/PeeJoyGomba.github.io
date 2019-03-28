@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		function Person(name, age, gender){
+  this.name = name;
+  this.age = age;
+  this.gender = gender
+
+  this.greeting = function(){
+    document.write("Hi guys my name is " + this.name + " and I am a " + this.age + " year old " + this.gender + ".<br/>");
+  };
+}
+
+var Patricia = new Person("Patricia", 26, "female");
+var Fortunate = new Person("Fortunate", 23, "female");
+var Gracious = new Person("Gracious", 22, "female");
+var Shalom = new Person("Shalom", 20, "female");
+var Joyie = new Person("Joyie", 24, "female");
+var Melody = new Person("Melody", 24, "female");
+var Marshall = new Person("Marshall", 23, "male");
+var Rumbie = new Person("Rumbie", 23, "female");
+var Yvonne = new Person("Yvonne", 23, "female");
+var Taurai = new Person("Taurai", 24, "male");
+
+
+    	Patricia.greeting();
+    	Fortunate.greeting();
+    	Gracious.greeting();
+    	Shalom.greeting();
+    	Joyie.greeting();
+    	Melody.greeting();
+    	Marshall.greeting();
+    	Rumbie.greeting();
+    	Yvonne.greeting();
+    	Taurai.greeting();
+    	
+
+    	
+
+	 	function ClassRoom(name, students){
+
+
+   this.firstname = name; 
+   this.students = students; 
+
+    this.divas= function(){
+               var text = "</br> These are the females in our class: <br/> <ul>";
+
+                   for(i=0; i<this.students.length; i++){
+                       if(this.students[i].gender == "female")//validating the code is important
+                       {
+                           text += "<li>";
+                           text += this.students[i].name
+                           text += "</li>"
+                       }
+               }
+
+                text += "</ul>"
+               document.write(text);
+           }
+           
+
+           this.maNinja= function(){
+           			var text = "<br> These are the males in our class: <br/> <ul>";
+
+           			 	for (i=0; i<this.students.length; i++){
+           			 		if(this.students[i].gender == "male")
+           			 		{
+           			 			text += "<li>"
+           			 			text += this.students[i].name
+           			 			text += "</li>"
+           			 		}
+           			 	}
+           			 	text += "</ul>"
+           			 	document.write(text);
+           }
+
+       	   }
+       var class1 = new ClassRoom("Micro Work Space " , [ Patricia, Fortunate, Gracious, Shalom, Joyie, Melody, Marshall, Rumbie, Yvonne, Taurai]);
+       			class1.divas();
+       			class1.maNinja();
+
+
+
+	</script>
+</body>
+</html>
